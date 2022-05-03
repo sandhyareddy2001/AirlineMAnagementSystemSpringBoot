@@ -1,0 +1,24 @@
+use db;
+create table userTable(uid int, first_name varchar(100), last_name varchar(100), role varchar(100));
+insert into userTable value(1,"Sandhya","Reddy","passenger");
+insert into userTable value(2,"Priyanka","Chopra","passenger");
+insert into userTable value(3,"Rohan","Panda","passenger");
+insert into userTable value(4,"Vivek","Naidu","admin");
+insert into userTable value(5,"Vinesh","Chaudhry","admin");
+select * from passengerTable;
+
+
+select * from userTable;
+create table flightDetails(flight_id int, airline_id int, airline_name varchar(100), from_location varchar(100), to_location varchar(100), departure_time timestamp, arrival_time timestamp, duration varchar(100), total_seats int);
+insert into flightDetails values(101,1001,"Indigo Airline", "Jodhpur", "Tirupati", "2022-05-02 05:30:18.740", "2022-05-02 08:30:18.740", "3 Hours",200); 
+insert into flightDetails values(102,1002,"Spice Jet", "Hyderabad", "Jammu and Kashmir", "2022-05-04 05:30:18.740", "2022-05-05 08:30:18.740", "23 Hours",250);
+insert into flightDetails values(103,1003,"Go Air", "Assam", "Kolkata", "2022-05-03 05:30:18.740", "2022-05-03 03:30:18.740", "20 Hours",400);
+insert into flightDetails values(104,1004,"Air India Express", "Maharashtra", "Chennai", "2022-05-02 05:30:18.740", "2022-05-02 08:30:18.740", "3 Hours",100);
+insert into flightDetails values(105,1004,"Air India Express", "Assam", "Kolkata", "2022-05-02 05:30:18.740", "2022-05-03 01:30:18.740", "18 Hours",100);
+insert into flightDetails values(106,1004,"Air India Express", "Assam", "Kolkata", "2022-05-02 05:30:18.740", "2022-05-03 01:30:18.740", "18 Hours",100);
+
+select * from flightDetails;
+select * from passengerTable;
+create table passengerTable(pid int,user_name varchar(100), pswd varchar(100), first_name varchar(100), last_name varchar(100), address varchar(100), mobile_number varchar(10), email_id varchar(100));
+insert into passengerTable values(1,"sandy2001","abcd","Sandhya", "Reddy", "Tirupati", "123456789", "bsandhya@gmail.com");
+insert into passengerTable values(2,"priya200","xyz","Priyanka", "Chopra", "Bangalore", "122216789", "cpriyanka@gmail.com");
